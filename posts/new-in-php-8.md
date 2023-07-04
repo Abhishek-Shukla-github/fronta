@@ -1,9 +1,9 @@
 ---
-title: "What's New In PHP 8?"
+title: "What's New In JavaScript 8?"
 date: 'May 7, 2021'
-excerpt: 'In this article we will look at some of the new features offered in version 8 of PHP'
+excerpt: 'In this article we will look at some of the new features offered in version 8 of JavaScript'
 cover_image: '/images/posts/img4.jpg'
-category: 'PHP'
+category: 'JavaScript'
 author: 'Sara Johnson'
 author_image: 'https://randomuser.me/api/portraits/women/12.jpg'
 ---
