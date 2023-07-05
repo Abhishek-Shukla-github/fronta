@@ -2,3 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Markdown rendering styles */
+
+p {
+  margin: 15px 0;
+  line-height: 1.8;
+}
+
+.blog-text ul,
+ol {
+  font-size: 110%;
+  line-height: 2.3;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.blog-text pre {
+  position: relative;
+  background: #f4f4f4;
+  padding: 20px;
+  margin: 20px 0;
+  line-height: 2.3;
+}
+
+.blog-text h1 {
+  font-size: 35px;
+}
+
+.blog-text h2,
+.blog-text h3,
+.blog-text h4 {
+  font-size: 27px;
+}
+
+.clipboard {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 30px;
+  width: 30px;
+  visibility: hidden;
+  cursor: pointer;
+}
+pre:hover > .clipboard {
+  visibility: visible !important;
+}
+.clipboard:hover {
+  visibility: visible !important;
+}
