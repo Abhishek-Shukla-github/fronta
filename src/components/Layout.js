@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Header from './Header'
+import Search from './Search'
 
 const Layout = ({title, keywords, description, children}) => {
   return (
@@ -12,6 +13,7 @@ const Layout = ({title, keywords, description, children}) => {
             <link rel='icon' href='/favicon.png' />
         </Head>
         <Header />
+        <Search />
         <main className='container mx-auto my-7'>{children}</main>
         {/* <h1 className='bg-green-300'>Header 1</h1> */}
     </div>

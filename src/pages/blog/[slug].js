@@ -16,8 +16,7 @@ export default function PostPage({
 
   useEffect(() => {
     codeBlock = document.querySelector("pre");
-    codeBlock.innerHTML +=
-      "<img class='clipboard' src='/images/clipboard.png' />";
+    if(codeBlock?.innerHTML) codeBlock.innerHTML = codeBlock.innerHTML + "<img class='clipboard' src='/images/clipboard.png' />";
   }, []);
 
   return (
