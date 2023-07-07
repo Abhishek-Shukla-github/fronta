@@ -9,7 +9,7 @@ export default function Post({ post, compact }) {
       {!compact && (
         <Image
           src={post.frontmatter.cover_image}
-          alt=''
+          alt='Front cover image'
           height={420}
           width={600}
           className='mb-4 rounded'

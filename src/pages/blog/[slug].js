@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
 import Link from "next/link";
+import Image from "next/image";
 import Layout from "../../components/Layout";
 import CategoryLabel from "../../components/CategoryLabel";
 import { useEffect } from "react";
@@ -16,7 +17,10 @@ export default function PostPage({
 
   useEffect(() => {
     codeBlock = document.querySelector("pre");
-    if(codeBlock?.innerHTML) codeBlock.innerHTML = codeBlock.innerHTML + "<img class='clipboard' src='/images/clipboard.png' />";
+    if (codeBlock?.innerHTML)
+      codeBlock.innerHTML =
+        codeBlock.innerHTML +
+        "<Image class='clipboard' src='/images/clipboard.png' alt='clipboard-icon'/>";
   }, []);
 
   return (
@@ -27,15 +31,26 @@ export default function PostPage({
           <h1 className="text-5xl mb-7">{title}</h1>
           <CategoryLabel>{category}</CategoryLabel>
         </div>
-        <img src={cover_image} alt="" className="w-full rounded" />
+        <Image
+          width={300}
+          height={300}
+          blurDataURL={cover_image}
+          src={cover_image}
+          alt="Fronta blog cover"
+          className="w-full rounded"
+        />
 
         <div className="flex justify-between items-center bg-gray-100 p-2 my-8">
           <div className="flex items-center">
-            <img
+            {/* <Image
+              placeholder="blur"
+              width={300}
+              height={300}
+              blurDataURL={author_image}
               src={author_image}
               alt=""
               className="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block"
-            />
+            /> */}
             <h4>{author}</h4>
           </div>
           <div className="mr-4">{date}</div>

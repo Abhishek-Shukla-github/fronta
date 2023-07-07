@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import SearchResults from './SearchResults'
+import SearchIcon from "../../public/images/search.png"
 
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -35,7 +37,7 @@ export default function Search() {
               placeholder='Search Posts...'
             />
 
-            <img src='/images/search.png' className='w-5 h-5 absolute top-0 right-0 text-black mt-3 mr-4' />
+            <Image width={50} height={50} src={SearchIcon} alt = "search-icon" className='w-5 h-5 absolute top-0 right-0 text-black mt-3 mr-4' />
           </form>
         </div>
       </div>
