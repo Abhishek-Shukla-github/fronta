@@ -23,6 +23,7 @@ ol {
   padding: 20px;
   margin: 20px 0;
   line-height: 2.3;
+  cursor: pointer;
 }
 
 .blog-text h1 {
@@ -34,7 +35,6 @@ ol {
 .blog-text h4 {
   font-size: 27px;
 }
-
 .clipboard {
   position: absolute;
   top: 10px;
@@ -49,4 +49,13 @@ pre:hover > .clipboard {
 }
 .clipboard:hover {
   visibility: visible !important;
+}
+.copy-text{
+  background: #111827;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  left: 0;
 }

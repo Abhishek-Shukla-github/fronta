@@ -13,14 +13,26 @@ export default function PostPage({
   content,
   slug,
 }) {
-  let codeBlock;
 
   useEffect(() => {
-    codeBlock = document.querySelector("pre");
-    if (codeBlock?.innerHTML)
-      codeBlock.innerHTML =
-        codeBlock.innerHTML +
-        "<Image class='clipboard' src='/images/clipboard.png' alt='clipboard-icon'/>";
+    let codeBlocks = document.querySelectorAll("pre");
+    codeBlocks.forEach((element) => {
+      if (element?.innerHTML) {
+        element.innerHTML =
+          element.innerHTML +
+          "<img class='clipboard' src='/images/clipboard.png' alt='clipboard-icon'/>";
+
+        element.addEventListener("click", (e) => {
+          element.firstChild.insertAdjacentHTML(
+            "afterend",
+            "<p class='copy-text'>Code Snippet Copied!</p>"
+          );
+          setTimeout(() => {
+            document.querySelector(".copy-text").style.display = "none";
+          }, 350);
+        });
+      }
+    });
   }, []);
 
   return (
@@ -58,9 +70,6 @@ export default function PostPage({
 
         <div className="blog-text mt-2">
           <div
-            onClick={() => {
-              navigator.clipboard.writeText(codeBlock.innerText);
-            }}
             dangerouslySetInnerHTML={{ __html: marked(content) }}
           ></div>
           {console.log("marked(content)", marked(content))}
