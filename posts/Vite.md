@@ -10,11 +10,11 @@ cover_image: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/UYsBCu9R
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1688846059527/e2d2b1e9-fb18-482e-acaa-e6a3c3c10727.png
 tags: js, javascript, npm, reactjs, vite
 # title: 'Tailwind vs. Bootstrap'
-date: 'May 5, 2021'
+date: 'Sat, Jul 08 2023'
 excerpt: 'Both Tailwind and Bootstrap are very popular CSS frameworks. In this article, we will compare them'
 # cover_image: '/images/posts/img2.jpg'
-category: 'CSS'
-author: 'Jane Doe'
+category: 'React'
+author: 'Abhishek Shukla'
 author_image: 'https://randomuser.me/api/portraits/women/11.jpg'
 
 ---
